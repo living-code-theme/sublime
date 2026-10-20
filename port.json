@@ -1,0 +1,48 @@
+{
+  "$schema": "https://living-code.dev/port.schema.json",
+  "schemaVersion": 1,
+  "name": "Sublime Text",
+  "slug": "sublime",
+  "group": "Editors",
+  "emoji": "🌅",
+  "description": "Living Code for Sublime Text. Repository-owned theme files, installation instructions and four color flavors.",
+  "homepage": "https://www.sublimetext.com",
+  "quick": "See installation instructions",
+  "aliases": [
+    "sublime"
+  ],
+  "flavors": [
+    "night",
+    "frost",
+    "paper",
+    "signal"
+  ],
+  "files": [
+    "living-code-frost.sublime-color-scheme",
+    "living-code-night.sublime-color-scheme",
+    "living-code-paper.sublime-color-scheme",
+    "living-code-signal.sublime-color-scheme"
+  ],
+  "images": [
+    {
+      "flavor": "night",
+      "path": "images/night.png",
+      "alt": "Sublime Text running Living Code Night"
+    },
+    {
+      "flavor": "frost",
+      "path": "images/frost.png",
+      "alt": "Sublime Text running Living Code Frost"
+    },
+    {
+      "flavor": "paper",
+      "path": "images/paper.png",
+      "alt": "Sublime Text running Living Code Paper"
+    },
+    {
+      "flavor": "signal",
+      "path": "images/signal.png",
+      "alt": "Sublime Text running Living Code Signal"
+    }
+  ]
+}

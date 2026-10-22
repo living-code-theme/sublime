@@ -32,6 +32,7 @@ if (kind === "npm") {
   if (kind === "firefox") console.log("XPI files are unsigned; release Firefox requires AMO signing.");
 } else if (kind === "sublime") {
   await write("Living Code.sublime-package", zip(await payload([...manifest.files.filter((path) => path.endsWith(".sublime-color-scheme")), "LICENSE"])));
+  await write("package-control.json", JSON.stringify({ name: "Living Code", details: "https://github.com/living-code-theme/sublime", labels: ["color scheme"], releases: [{ sublime_text: ">=4000", tags: true }] }, null, 2) + "\n");
 } else {
   await write(`living-code-${manifest.slug}-${pkg.version}.zip`, zip(await payload([...manifest.files, "README.md", "LICENSE"])));
   if (kind === "obsidian") {

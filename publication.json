@@ -1,0 +1,7 @@
+{
+  "schemaVersion": 1,
+  "artifacts": ["Living Code.sublime-package", "package-control.json"],
+  "channels": [
+    { "name": "Sublime Package Control", "url": "https://packagecontrol.io/docs/submitting_a_package", "instructions": "Review package-control.json as the package entry for repository/l.json in wbond/package_control_channel. Commit native scheme files at living-code-theme/sublime's root and create a matching v-prefixed semver tag. Package Control uses repository/tag archives, not an uploaded .sublime-package. The latter is a native manual-install artifact. Submit a human-reviewed upstream PR; packaging opens none." }
+  ]
+}

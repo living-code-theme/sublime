@@ -14,6 +14,9 @@ pnpm test
 
 - `src/generate.mjs`: this application's format and semantic-role mappings. The interface is `generate(flavors)`,
   returning `{ path, content }` records for the four resolved flavors in the pinned snapshot. It performs no writes.
+- `src/scopes.mjs`: a byte-identical copy of the [tmTheme port's](https://github.com/living-code-theme/tmtheme) scope →
+  role table. Change it there first; CI (and a weekly scheduled run) fails when the copies drift. Sublime-only
+  scopes stay in `src/generate.mjs`.
 - `palette/theme.json`: app-agnostic resolved palette data, pinned to a core Git revision and SHA-256 fingerprint.
 - `scripts/color.mjs`: vendored core color math used for application-specific mixtures, verified against the pin.
 - `scripts/generated.json`: this port's explicit managed-file allowlist. Build changes only these files; check

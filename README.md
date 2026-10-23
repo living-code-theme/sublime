@@ -67,7 +67,7 @@ curl -fsSL --create-dirs --output-dir "$HOME/Library/Application Support/Sublime
 
 The source files are in [the repository root](.). To customize a manual install, edit the copied file. With the Package Control install, add a `Packages/User/<Scheme>.sublime-color-scheme` with the same file name as the package scheme and override entries under `variables` or `globals`.
 
-`pnpm run package:sublime` builds `dist/sublime/Living Code.sublime-package` from the same generator. The [bat · delta (tmTheme) port](https://github.com/living-code-theme/tmtheme) stays for bat and delta; Sublime Text should use this native scheme.
+`pnpm run package:sublime` builds `dist/sublime/Living Code.sublime-package` from the same generator. The [bat port](https://github.com/living-code-theme/tmtheme)'s `.tmTheme` files are for bat and delta; Sublime Text should use this native scheme, which adds diff gutters, find-in-files colors, overridable variables and more.
 
 ## Flavors
 
@@ -115,7 +115,7 @@ See [Sublime Text's documentation](https://www.sublimetext.com) for application 
 
 ## Compatibility
 
-Targets Sublime Text 4 using the native .sublime-color-scheme format. The package remains Living Code, with v-prefixed release tags. bat and delta should use the separate tmTheme port.
+Targets Sublime Text 4 using the native .sublime-color-scheme format. The package remains Living Code, with v-prefixed release tags. bat and delta should use the separate [bat port](https://github.com/living-code-theme/tmtheme).
 
 ## Contributing
 

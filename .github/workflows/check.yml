@@ -4,7 +4,7 @@ on:
   pull_request:
   workflow_dispatch:
   schedule:
-    - cron: "23 5 * * 1" # weekly: catch drift from the canonical tmTheme scope table
+    - cron: "23 5 * * 1" # weekly: catch drift from the canonical bat-port scope table
 permissions:
   contents: read
 jobs:
@@ -18,10 +18,10 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - run: pnpm check
       - run: pnpm test
-      - name: Scope table matches the canonical tmTheme port
+      - name: Scope table matches the canonical bat port
         run: |
-          curl -fsSL --retry 3 https://raw.githubusercontent.com/living-code-theme/tmtheme/main/src/scopes.mjs -o "$RUNNER_TEMP/scopes.mjs"
-          diff -u "$RUNNER_TEMP/scopes.mjs" src/scopes.mjs || { echo "::error file=src/scopes.mjs::Drifted from living-code-theme/tmtheme src/scopes.mjs; copy it unchanged."; exit 1; }
+          curl -fsSL --retry 3 https://raw.githubusercontent.com/living-code-theme/bat/main/src/scopes.mjs -o "$RUNNER_TEMP/scopes.mjs"
+          diff -u "$RUNNER_TEMP/scopes.mjs" src/scopes.mjs || { echo "::error file=src/scopes.mjs::Drifted from living-code-theme/bat src/scopes.mjs; copy it unchanged."; exit 1; }
       - run: node scripts/package.mjs
       - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         with:
